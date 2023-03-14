@@ -25,6 +25,14 @@ jobs:
         uses: borales/actions-yarn@v4
         with:
           cmd: generate
+      - name : Deploy to server
+        uses: garygrossgarten/github-action-scp@release
+        with:
+          local: .output/public
+          remote: /home/github/test
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.SSH_USER }}
+          privateKey :  ${{ secrets.SSH_KEY }}
     
       
     
