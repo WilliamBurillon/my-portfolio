@@ -29,7 +29,7 @@ jobs:
         uses: garygrossgarten/github-action-scp@release
         with:
           local: .output/public
-          remote: /home/github/test
+          remote: /srv/config/portfolio/generated
           host: ${{ secrets.HOST }}
           username: ${{ secrets.SSH_USER }}
           privateKey :  ${{ secrets.SSH_KEY }}
