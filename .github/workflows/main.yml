@@ -13,6 +13,14 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16.x
+      - name: Install dependencies
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: install
+      - name: Install sass
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: add -D sass
       - name: Run generate
         uses: borales/actions-yarn@v4
         with:
