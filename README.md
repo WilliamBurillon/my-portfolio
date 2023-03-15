@@ -1,6 +1,9 @@
-# Nuxt 3 Minimal Starter
+# My portfolio with nuxt 3
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+A simple and design portfolio with nuxt 3. 
+
+**Disclaimer**: I'm not a front end developer, so the code is not perfect. But as DevOps / Backend developer, I made some effort in order to make it look good. 
+Feel free to contribute and open issues if you find something that can be improved. 
 
 ## Setup
 
@@ -10,11 +13,6 @@ Make sure to install the dependencies:
 # yarn
 yarn install
 
-# npm
-npm install
-
-# pnpm
-pnpm install
 ```
 
 ## Development Server
@@ -22,21 +20,18 @@ pnpm install
 Start the development server on http://localhost:3000
 
 ```bash
-npm run dev
+yarn dev
 ```
 
 ## Production
 
-Build the application for production:
+Build the application for production. It will be generated in the `.ouput/public` directory and can be served with any static hosting service like Nginx.
 
 ```bash
-npm run build
+yarn generate
 ```
 
-Locally preview production build:
+## Production with Github actions
 
-```bash
-npm run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+The project is configured to build and deploy the application on my personal server. The portfolio is hosted on [https://www.williamburillon.com](https://www.williamburillon.com).
+There is an article on this portfolio which explains how to do it. 
