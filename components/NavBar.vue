@@ -141,8 +141,6 @@ a.active {
     font-weight: bold;
     color: #64ffda;
 }
-img {
 
-}
 
 </style>

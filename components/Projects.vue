@@ -22,10 +22,10 @@
                         </div>
 
                         <div class="project-article">
-                            <a :href="project.article" class="project-article">
+                            <nuxt-link :to="project.article" class="project-article">
                                 <p>Read more</p>
                                 <Icon size="48px" name="material-symbols:arrow-right-rounded"/>
-                            </a>
+                            </nuxt-link>
                         </div>
                     </div>
 
@@ -65,7 +65,7 @@ export default {
                 "use case of how to deploy a Nuxt app with Github Actions and serve it with Nginx and Docker",
             skills : ["Nuxt.js","Github Action","Docker","Nginx","Bash","DevOps","Sysadmin"],
             image : "projects/nuxt-github-nginx.png",
-            article:"https://www.google.com"
+            article:"/nuxt-github"
         },
         {
             title : "Data analysis on Tiktok Videos",
@@ -74,7 +74,7 @@ export default {
                 "using Python",
             skills : ["Python","Pandas","API Rest"],
             image : "projects/tiktok-python.png",
-            article:"https://www.google.com"
+            article:"/articles/test"
         }
     ],
     methods : {
