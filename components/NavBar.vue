@@ -129,6 +129,7 @@ li  {
 
 a {
     text-decoration: none;
+    font-family: SF Mono Light;
     color: #e6f1ff;
 
 }
