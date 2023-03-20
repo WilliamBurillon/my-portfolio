@@ -82,15 +82,16 @@ export default {
 
         }
     },
-    mounted () {
-        window.addEventListener('scroll', this.onScroll)
-
-        queryContent('articles').find().then((response) => {
-            this.articles = response
-        })
+    mounted() {
+      window.addEventListener('scroll', this.onScroll)
 
     },
-    beforeUnmount () {
+  async beforeCreate() {
+    await queryContent('articles').find().then((response) => {
+      this.articles = response
+    })
+  },
+  beforeUnmount () {
         window.removeEventListener('scroll', this.onScroll)
 
     }
