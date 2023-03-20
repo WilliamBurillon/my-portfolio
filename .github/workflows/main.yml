@@ -24,8 +24,7 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_KEY }}
           script: |
-            cd /srv/config/portfolio/project
-            docker-compose stop
+            cd /srv/config/portfolio
             docker-compose up -d
     
       
