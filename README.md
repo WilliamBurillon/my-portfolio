@@ -33,5 +33,5 @@ yarn generate
 
 ## Production with Github actions
 
-The project is configured to build and deploy the application on my personal server. The portfolio is hosted on [https://www.williamburillon.com](https://www.williamburillon.com).
+The project is configured to build and deploy the application on my personal server. The portfolio is hosted on [https://www.williamburillon.com](https://williamburillon.com).
 There is an article on this portfolio which explains how to do it. 

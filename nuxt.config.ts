@@ -9,7 +9,12 @@ export default defineNuxtConfig({
         '@nuxt/content',
         'nuxt-icon'
     ],
-    content : {
+    content: {
+        documentDriven: true,
+        highlight: {
+            // Theme used in all color schemes.
+            theme: 'github-dark-dimmed'
+        }
     },
     buildModules: [
         '@nuxtjs/google-fonts'

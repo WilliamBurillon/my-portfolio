@@ -6,7 +6,7 @@
 
                     <Icon class="header-action" name="ic:baseline-arrow-back-ios" @click="moveTo(-1)"/>
 
-                            <h3 > {{$options.skills[skillActive].skillCategory}} </h3 >
+                            <h3 class="h3-class"> {{$options.skills[skillActive].skillCategory}} </h3 >
                     <Icon class="header-action" name="ic:baseline-arrow-forward-ios" @click="moveTo(1)"/>
             </div>
             <div >

@@ -1,6 +1,6 @@
 <template>
     <header class="navbar" :class="{ 'navbar--hidden': !showNavbar, 'navbar--top' : navBarOnTop }">
-        <a href="/" @click="deactivateLink"><img src="@/public/logo.svg" class="logo"></a>
+        <a  href="/" @click="deactivateLink"><img src="@/public/logo.svg" class="logo a-class"></a>
         <nav>
             <ul>
                 <li v-for="link in links.slice(1)" :key="link.name" >

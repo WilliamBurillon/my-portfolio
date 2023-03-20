@@ -3,17 +3,17 @@
         <div class="wrapper" >
             <div class="title-wrapper">
                 <div class="line-1" style="margin-right: 15px"></div>
-                <h1>Get in touch</h1>
+                <h1 class="h1-class">Get in touch</h1>
                 <div class="line-1"></div>
             </div>
             <div class="content">
-                <h2>
+                <h2 class="h2-class">
                     I'm currently looking for a new opportunity, my inbox is always open.
                     Whether you have a question or just want to say hi, I'll try my best to get back to you!
                 </h2>
                 <div class="button-wrapper">
                     <button>
-                        <a href="mailto:william.burillon@gmail.com">Say Hello</a>
+                        <a class="a-class" href="mailto:william.burillon@gmail.com">Say Hello</a>
                     </button>
                 </div>
             </div>
