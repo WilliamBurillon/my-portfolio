@@ -2,7 +2,7 @@
     <section  class="about" id="about">
         <div class="wrapper" >
             <div class="title-wrapper">
-                <h1>About</h1>
+                <h1 class="h1-class">About</h1>
                 <div class="line-1"></div>
             </div>
             <div class="box-wrapper">
@@ -19,7 +19,7 @@
                         be a part of that
                         transformation.</p>
                     <div>
-                        <h2>Technical Skills</h2>
+                        <h2 class="h2-class">Technical Skills</h2>
                         <SkillViewer/>
                     </div>
 

@@ -3,15 +3,15 @@
         <div class="wrapper">
                 <div class="text-wrapper">
                     <div class="typingEffectWrapper">
-                        <h3 v-bind:class="{'typingEffect' : show }">Hello there 👋, my name is </h3>
+                        <h3 class="h3-class" v-bind:class="{'typingEffect' : show }">Hello there 👋, my name is </h3>
                     </div>
-                    <h1>William Burillon.</h1>
-                    <h2>Data whisperer, code tamer, and humble problem solver.</h2>
+                    <h1 class="h1-class" >William Burillon.</h1>
+                    <h2 class="h2-class">Data whisperer, code tamer, and humble problem solver.</h2>
                     <p>I am a DevOps engineer with some Data affinity. I love to create data projects and put them into production. </p>
                 </div>
                 <div class="button-wrapper">
                     <button>
-                        <a href="#about">About</a>
+                        <a class="a-class" href="#about">About</a>
                     </button>
                 </div>
         </div>

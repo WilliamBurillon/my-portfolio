@@ -18,6 +18,7 @@
   },
   "dependencies": {
     "phosphor-vue": "^1.4.2",
+    "sass": "^1.59.3",
     "vue-typed-js": "^0.1.2"
   }
 }

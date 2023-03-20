@@ -2,12 +2,12 @@
     <section class="project-main" id="works">
         <div class="wrapper">
             <div class="title-wrapper">
-                <h1>Works</h1>
+                <h1 class="h1-class">Works</h1>
                 <div class="line-1"></div>
             </div>
             <div class="project-wrapper">
-                <div class="project" v-for="project in $options.projects">
-                    <img :src="project.image" alt="project image">
+                <div class="project" v-for="project in articles">
+                    <img :src="project.image_project_list" alt="project image">
                     <div class="project-content-wrapper">
                         <div class="project-title">
                             <h2>{{project.title}}</h2>
@@ -22,10 +22,10 @@
                         </div>
 
                         <div class="project-article">
-                            <a :href="project.article" class="project-article">
+                            <nuxt-link :to="project.article" class="project-article a-class">
                                 <p>Read more</p>
                                 <Icon size="48px" name="material-symbols:arrow-right-rounded"/>
-                            </a>
+                            </nuxt-link>
                         </div>
                     </div>
 
@@ -42,41 +42,11 @@
 <script>
 export default {
     name: "Project",
-    projects : [
-        {
-            title : "Install multiple VM with Vagrant",
-            description: "A Vagrant project in order to install a couple of Virtual Machine an server. It can be useful in" +
-            "order to setup a dev environment or a test environment",
-            skills : ["Vagrant","DevOps","Sysadmin"],
-            image : "projects/vagrant.png",
-            article:"https://www.google.com"
-        },
-        {
-            title : "Ansible / Docker Swarm Use case",
-            description: "An Ansible project to initialise a Docker Swarm cluster with a couple of nodes. This project  "+
-            "can be used to deploy services to this cluster using Ansible",
-            skills : ["Ansible","Docker Swarm","DevOps","Sysadmin","Python","Bash"],
-            image : "projects/ansible-docker-swarm.png",
-            article:"https://www.google.com"
-        },
-        {
-            title : "Deploy Nuxt app with Github Actions" ,
-            description: "This portfolio is bundled with Nuxt and deployed with Github Actions. This project is a " +
-                "use case of how to deploy a Nuxt app with Github Actions and serve it with Nginx and Docker",
-            skills : ["Nuxt.js","Github Action","Docker","Nginx","Bash","DevOps","Sysadmin"],
-            image : "projects/nuxt-github-nginx.png",
-            article:"https://www.google.com"
-        },
-        {
-            title : "Data analysis on Tiktok Videos",
-            description: "A project to analyse Tiktok videos in order to find an correlation between the number of views and video" +
-                " features. It uses the Tiktok API to get the videos and then analyse them" +
-                "using Python",
-            skills : ["Python","Pandas","API Rest"],
-            image : "projects/tiktok-python.png",
-            article:"https://www.google.com"
+    data(){
+        return {
+            articles : []
         }
-    ],
+    },
     methods : {
         onScroll(){
             const currentScrollPosition = window.scrollY || document.documentElement.scrollTop
@@ -114,6 +84,10 @@ export default {
     },
     mounted () {
         window.addEventListener('scroll', this.onScroll)
+
+        queryContent('articles').find().then((response) => {
+            this.articles = response
+        })
 
     },
     beforeUnmount () {
@@ -261,6 +235,9 @@ img {
     color: #64ffda;
 }
 
+.project-title{
+  max-width: 80%;
+}
 
 
 h1 {
