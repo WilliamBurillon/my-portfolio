@@ -141,6 +141,7 @@ export default {
     margin-top: 30px;
     margin-bottom: 100px;
     .project-content-wrapper {
+        width: 70%;
         text-align: left;
         display: flex;
         flex-direction: column;
@@ -176,6 +177,7 @@ export default {
     margin-bottom: 100px;
 
     .project-content-wrapper {
+        width: 70%;
         text-align: right;
         display: flex;
         flex-direction: column;
@@ -203,7 +205,7 @@ export default {
 
 
 img {
-    width: 55%;
+    width: 40%;
     height: 300px ;
     object-fit: cover;
     border-radius: 7px;
@@ -216,6 +218,7 @@ img {
     border-radius: 5px;
     background : #112240;
     padding: 25px;
+  margin-bottom: 10px;
 
 }
 
@@ -236,9 +239,7 @@ img {
     color: #64ffda;
 }
 
-.project-title{
-  max-width: 80%;
-}
+
 
 
 h1 {
