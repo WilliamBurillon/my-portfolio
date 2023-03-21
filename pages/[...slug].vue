@@ -4,7 +4,7 @@
 
         <div class="article">
             <ContentDoc v-slot="{ doc }" >
-                <div class="article-header">
+              <div class="article-header">
                     <h1>{{ doc.title }}</h1>
                     <span class="description">{{ doc.description }}</span>
                     <img class="img-wrapper" :src="doc.image" >
@@ -146,7 +146,7 @@ p img {
   border-radius: 7px;
 }
 
-li {
+.article-content ul li {
   margin-bottom: 8px;
   font-family: 'Source Sans Pro', sans-serif;
   color: #8892b0;
