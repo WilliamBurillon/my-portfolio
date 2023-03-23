@@ -11,7 +11,7 @@
                 </div>
                 <div class="button-wrapper">
                     <button>
-                        <a class="a-class" href="#about">About</a>
+                        <a class="a-class test" href="#about">About</a>
                     </button>
                 </div>
         </div>
@@ -55,15 +55,15 @@ export default {
 
 .wrapper {
     margin-top: 7vh;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    display: inline-grid;
-    align-items: center;
-    grid-template-columns: 800px  auto;
-    grid-template-rows: 400px auto;
-    grid-gap: 30px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    top: 29.5%;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+
 
 }
 
@@ -78,16 +78,13 @@ export default {
 }
 
 .text-wrapper {
-    grid-column: 1;
-    grid-row: 1;
-    height: 80%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     animation-duration: 1s;
     animation-name: animate-fade;
     animation-delay: 0.2s;
     animation-fill-mode: backwards;
+    gap: 20px;
 
 }
 
