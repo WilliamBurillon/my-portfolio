@@ -34,10 +34,6 @@ export default {
   color: #b1bde3;
 }
 
-.article-content > ul > li {
-  color: #b1bde3;
-}
-
 
 .article{
     position: absolute;
@@ -149,9 +145,22 @@ p img {
 .article-content ul li {
   margin-bottom: 8px;
   font-family: 'Source Sans Pro', sans-serif;
-  color: #8892b0;
+  color: #b1bde3;
   font-weight: 300;
   margin-left: 25px;
+}
+
+.article-content ol li {
+  margin-bottom: 8px;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #b1bde3;
+  font-weight: 300;
+  margin-left: 25px;
+}
+
+.article-content ul li a {
+  color: #64ffda;
+  font-weight: 500;
 }
 
 ul li code{
