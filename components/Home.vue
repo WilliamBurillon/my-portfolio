@@ -10,7 +10,7 @@
                     <p>I am a DevOps engineer with some Data affinity. I love to create data projects and put them into production. </p>
                 </div>
                 <div class="button-wrapper">
-                    <button>
+                    <button class="my-button">
                         <a class="a-class test" href="#about">About</a>
                     </button>
                 </div>
@@ -54,18 +54,49 @@ export default {
 /*Wrapper setting */
 
 .wrapper {
-    margin-top: 7vh;
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-    top: 29.5%;
+  position: relative;
+    padding: 282px 400px;
     display: flex;
     flex-direction: column;
     gap: 60px;
 
 
 }
+@media screen and (max-width: 1440px) {
+  .wrapper {
+    padding: 282px 300px 180px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .wrapper {
+    padding: 282px 200px 100px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    padding: 282px 100px 100px;
+
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .wrapper {
+    padding: 180px 40px 100px;
+  }
+
+  h1{
+    font-size: 2.3em;
+  }
+
+  h2{
+    font-size: 27px;
+  }
+}
+
+
+
 
 .button-wrapper{
     grid-column: 1;

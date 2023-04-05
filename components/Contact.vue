@@ -12,7 +12,7 @@
                     Whether you have a question or just want to say hi, I'll try my best to get back to you!
                 </h2>
                 <div class="button-wrapper">
-                    <button>
+                    <button class="my-button">
                         <a class="a-class" href="mailto:william.burillon@gmail.com">Say Hello</a>
                     </button>
                 </div>
@@ -63,19 +63,50 @@ h2 {
     text-align: center;
 }
 
+.button-wrapper{
+  margin-top: 40px;
+}
+
+
+
+
+
 
 
 .wrapper {
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-    top: 20%;
-    width: 60%;
-    height:60vh;
-    display: flex;
-    flex-direction: column;
+
+  padding: 18% 15%;
 
 }
+
+@media screen and (max-width: 1440px) {
+  .wrapper {
+    padding: 20% 18%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    padding:90px 100px;
+
+  }
+}
+
+
+@media screen and (max-width: 425px) {
+  .wrapper {
+    padding: 60px 50px;
+  }
+  h1{
+    font-size: 8vw;
+  }
+
+  h2{
+    font-size: 5vw;
+  }
+
+}
+
 
 
 .title-wrapper {

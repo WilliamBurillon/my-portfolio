@@ -1,9 +1,31 @@
 <template>
     <header class="navbar" :class="{ 'navbar--hidden': !showNavbar, 'navbar--top' : navBarOnTop }">
         <a  href="/" @click="deactivateLink"><img src="@/public/logo.svg" class="logo a-class"></a>
-        <nav>
+      <div id="sidemenu">
+        <button class="sidemenu__btn" v-on:click="navOpen=!navOpen" v-bind:class="{active:navOpen}">
+          <span class="top"></span>
+          <span class="mid"></span>
+          <span class="bottom"></span>
+        </button>
+
+        <transition name="translateX">
+          <div v-show="navOpen" class="overlay">
+            <div class="blured-background">
+            </div>
+            <nav class="sidenave" >
+              <ul  class="my-ul">
+                <li class="my-li" v-for="link in links.slice(1)" :key="link.name" >
+                  <NuxtLink :to="{ hash: link.hash }" :class="{active: link.active}" @click="activeLink">{{link.name}}</NuxtLink>
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+        </transition>
+      </div>
+        <nav class="classicnav">
             <ul>
-                <li v-for="link in links.slice(1)" :key="link.name" >
+                <li  v-for="link in links.slice(1)" :key="link.name" >
                         <NuxtLink :to="{ hash: link.hash }" :class="{active: link.active}" @click="activeLink">{{link.name}}</NuxtLink>
                 </li>
             </ul>
@@ -18,6 +40,7 @@ export default {
     name: "NavBar",
     data() {
         return {
+            navOpen: false,
             showNavbar: true,
             lastScrollPosition: 0,
             navBarOnTop: true,
@@ -33,8 +56,9 @@ export default {
         activeLink(e) {
             this.links.forEach(link => link.active = false);
             const href = e.target.getAttribute('href').slice(1);
-            console.log(href);
+
             this.links.map(link => link.hash === href ? link.active = true : link.active = false);
+            this.navOpen = false
         },
         deactivateLink(e) {
             this.links.forEach(link => link.active = false);
@@ -75,9 +99,25 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 
+#sidemenu {
+    display: none;
+    width: 42px;
+    height: 42px;
+    margin-top: 5px;
+    color: #64ffda;
+}
 
+@media screen and (max-width: 440px) {
+  #sidemenu {
+        display: inline;
+    }
+  .classicnav {
+        display: none;
+    }
+
+}
 .logo {
     width: 42px;
     height: 42px;
@@ -102,13 +142,13 @@ export default {
     transform: translate3d(0, 0, 0);
     transition: 0.1s all ease-out;
     /* The home need to take all the screen*/
-    height: 7vh;
+    height: 50px;
     width: 100%;
     font-family: "SF Mono Light";
 }
 
 .navbar--top {
-    height: 10vh;
+    height: 70px;
     box-shadow: none;
     opacity: 100%;
 }
@@ -122,7 +162,7 @@ export default {
 li  {
 
     list-style: none;
-    margin-right: 2vw;
+    margin-right: 40px;
     display: inline-block;
     color: #ffffff;
 }
@@ -142,6 +182,139 @@ a.active {
     font-weight: bold;
     color: #64ffda;
 }
+
+
+#sidemenu {
+  .blured-background{
+    width: 400px;
+    background: #0a192f;
+    opacity: 0.9;
+    filter: blur(1px);
+    /*filter: blur(4px);*/
+    position: fixed;
+    top:50px;
+    left: 0;
+    height: 100vh;
+    z-index: 98;
+  }
+
+  .sidenave {
+
+    width: 200px;
+    background: #0a192f;
+    position: fixed;
+    top:45px;
+    left: 50%;
+    height: 100vh;
+
+    padding: 100px 20px 20px;
+    z-index: 99;
+
+  }
+
+  .my-ul{
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    padding: 10px;
+    align-items: end;
+  }
+
+
+
+  .sidemenu {
+  &__btn {
+
+
+      margin-top: 20px;
+       border: none;
+       position: relative;
+       z-index: 100;
+       appearance: none;
+       cursor: pointer;
+       outline: none;
+
+    span {
+      display: inline;
+      width: 20px;
+      height: 2px;
+     margin-left: 20px;
+      background: #64ffda;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      transition: all .4s ease;
+
+      &.top {
+         transform: translateY(-8px);
+       }
+
+      &.bottom {
+         transform: translateY(8px);
+       }
+    }
+    &.active{
+      .top {
+        transform: rotate(-45deg);
+      }
+      .mid{
+        transform: translateX(-20px) rotate(360deg);
+        opacity: 0;
+      }
+      .bottom {
+        transform: rotate(45deg);
+      }
+    }
+
+  }
+
+  &__wrapper {
+     padding-top: 50px;
+   }
+
+  &__list {
+     padding-top: 50px;
+     list-style:none;
+     padding: 0;
+     margin: 0;
+   }
+
+  &__item {
+    a {
+      text-decoration: none;
+      line-height: 1.6em;
+      font-size: 1.6em;
+      padding: .5em;
+      display: inline;
+      color: white;
+      transition: .4s ease;
+
+      &:hover {
+         background: lightgrey;
+         color: dimgrey;
+       }
+    }
+  }
+  }
+}
+
+.translateX-enter{
+  transform:translateX(-200px);
+  opacity: 0;
+}
+
+.translateX-enter-active,.translateX-leave-active,.translateX-enter{
+  transform-origin: top left 0;
+  transition:.8s ease;
+}
+
+.translateX-leave-to{
+  transform: translateX(200px);
+  opacity: 0;
+}
+
 
 
 </style>

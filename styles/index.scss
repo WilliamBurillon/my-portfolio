@@ -34,7 +34,7 @@ body {
 
 .h1-class{
   font-family: 'Rubik', sans-serif;
-  font-size: 80px;
+  font-size: 5vw;
   color: #e6f1ff;
   margin: 0 0 0 0;
 
@@ -42,7 +42,7 @@ body {
 
 .h2-class{
   font-family: 'Rubik', sans-serif;
-  font-size: 50px;
+  font-size: 3.1vw;
   color: #8892b0;
   margin: 0 0 0 0;
 }
@@ -76,27 +76,25 @@ p{
 .home {
   display: flex;
   /* The home need to take all the screen*/
-  height: 100vh;
+
+
 
 }
 
 .about {
   /* The home need to take all the screen*/
-  height: 100vh;
   display: flex;
 
 }
 
 
-.contact{
-  height: 75vh;
-}
+
 
 
 /*Css for components*/
 
 
-button {
+.my-button {
   font-family: 'SF Mono Light';
 
 
@@ -110,7 +108,7 @@ button {
   transition: all 0.3s ease-in-out;
 }
 
-button:hover {
+.my-button:hover {
   background: rgba(100,255,218,0.2);
 
   color: #0a192f;
