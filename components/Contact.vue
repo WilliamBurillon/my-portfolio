@@ -75,13 +75,12 @@ h2 {
 
 .wrapper {
 
-  padding: 18% 15%;
-
+  padding: 5% 15% 18%;
 }
 
 @media screen and (max-width: 1440px) {
   .wrapper {
-    padding: 20% 18%;
+    padding:  5% 20% 18%;
   }
 }
 
