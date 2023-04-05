@@ -34,6 +34,38 @@ export default {
   color: #b1bde3;
 }
 
+@media screen and (max-width: 1024px) {
+  /* Insérez vos propriétés CSS ici, avec vos sélecteurs*/
+  .article-wrapper .article {
+    max-width: 55%;
+  }
+  .article-header h1 {
+    font-size: 8vw;
+  }
+  .article-header h2 {
+    font-size: 5vw;
+  }
+
+}
+
+
+@media screen and (max-width: 768px) {
+  /* Insérez vos propriétés CSS ici, avec vos sélecteurs*/
+  .article-wrapper .article {
+    max-width: 60%;
+  }
+
+}
+
+
+@media screen and (max-width: 425px) {
+  /* Insérez vos propriétés CSS ici, avec vos sélecteurs*/
+  .article-wrapper .article {
+    max-width: 75%;
+  }
+
+}
+
 
 .article{
     position: absolute;

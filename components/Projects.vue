@@ -114,14 +114,87 @@ export default {
 }
 
 .wrapper {
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-    top: 20%;
-    margin-top: 7vh;
-    width: 60%;
+  padding: 18% 15%;
 }
 
+
+
+@media screen and (max-width: 1440px) {
+  /* Insérez vos propriétés CSS ici, avec vos sélecteurs*/
+  .wrapper {
+    padding:18% 10%;
+  }
+  img.responsive{
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+  }
+
+
+
+
+  /* img {
+     max-width: 400px;
+     width: 100%;
+     height: auto;
+   }
+   .image-wrapper::before {
+     max-width: 400px;
+     height: auto;
+   }*/
+}
+
+@media screen and (max-width: 1024px) {
+  /* Insérez vos propriétés CSS ici, avec vos sélecteurs*/
+  .wrapper {
+    padding:18% 7%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* Insérez vos propriétés CSS ici, avec vos sélecteurs*/
+  .wrapper {
+    padding:90px 100px;
+
+  }
+}
+
+
+@media screen and (max-width: 425px) {
+  /* Insérez vos propriétés CSS ici, avec vos sélecteurs*/
+  .wrapper {
+    padding: 60px 50px;
+  }
+    img{
+      display: none;
+    }
+
+  .project-wrapper .project:nth-child(even) .project-content-wrapper{
+    width: 100%;
+    text-align: left;
+    margin-left : 0;
+  }
+
+  .project-wrapper .project:nth-child(odd) .project-content-wrapper{
+    width: 100%;
+    text-align: right;
+    margin-right : 0;
+  }
+
+
+
+  .project-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .project-wrapper .project:nth-child(odd){
+    margin-bottom: 0;
+  }
+  .project-wrapper .project:nth-child(even){
+    margin-bottom: 0;
+  }
+}
 
 
 .project{
@@ -129,7 +202,7 @@ export default {
     animation-duration: 0.4s;
     animation-name: animate-fade;
     animation-fill-mode: backwards;
-    /*animation-delay: .2s;*/
+  align-items: end;
 }
 
 
@@ -206,9 +279,10 @@ export default {
 
 img {
     width: 40%;
-    height: 300px ;
+    height: 100% ;
     object-fit: cover;
     border-radius: 7px;
+  align-items: center;
 
 
 }

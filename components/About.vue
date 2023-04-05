@@ -6,6 +6,9 @@
                 <div class="line-1"></div>
             </div>
             <div class="box-wrapper">
+              <div class="image-wrapper">
+                <img src="@/public/portrait.jpg" alt="William Burillon" class="responsive">
+              </div>
                 <div class="content-wrapper">
                     <p>As a <span class="colored-text">DevOps</span> and <span class="colored-text">Data engineer</span>,
                         I enjoy creating solutions that are both technically sound and practical
@@ -18,7 +21,7 @@
                         transform businesses and help them unlock the full potential of their data, and I am excited to
                         be a part of that
                         transformation.</p>
-                    <div>
+                    <div class="skills-viewer">
                         <h2 class="h2-class">Technical Skills</h2>
                         <SkillViewer/>
                     </div>
@@ -26,16 +29,12 @@
                 </div>
 
 
-                <div class="image-wrapper">
-                    <img src="@/public/portrait.jpg" alt="William Burillon">
-                </div>
+
             </div>
         </div>
 
     </section>
-    <div>
-        <Icon name="ic:baseline-arrow-forward-ios"/>
-    </div>
+
 </template>
 
 <script>
@@ -83,12 +82,86 @@ export default {
 
 
 .wrapper {
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-    top: 20%;
-    margin-top: 7vh;
-    width: 60%;
+  position: relative;
+  padding: 282px 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 1440px) {
+  .wrapper {
+    padding:20% 18%;
+  }
+  img.responsive{
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+  }
+
+  .wrapper .box-wrapper .image-wrapper::before {
+    width: 300px;
+    height: 300px;
+    left: 45px;
+
+
+  }
+
+
+}
+
+@media screen and (max-width: 1024px) {
+  .skills-viewer {
+    width: 220%;
+  }
+
+
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    padding:90px 100px;
+
+  }
+  .wrapper .box-wrapper{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  img.responsive{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  .wrapper .box-wrapper .image-wrapper{
+    margin-bottom: 30px;
+  }
+  .skills-viewer{
+    width: 100%;
+  }
+  .wrapper .box-wrapper .image-wrapper::before {
+    width: 95%;
+    height: 100%;
+    left: 45px;
+
+
+  }
+}
+
+
+@media screen and (max-width: 425px) {
+  .wrapper {
+    padding: 60px 50px;
+  }
+
+  .wrapper .box-wrapper .image-wrapper::before {
+    width: 90%;
+    height: 100%;
+    top: 15px;
+    left: 45px;
+  }
+
+
+
 }
 
 
@@ -106,17 +179,13 @@ export default {
 }
 
 .box-wrapper {
-
-    display: grid;
-    grid-gap: 30px;
-
-
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
 }
 
 
 .content-wrapper {
-    grid-column: 1;
-    grid-row: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -126,21 +195,20 @@ export default {
     animation-delay: 0.1s;
     animation-fill-mode: backwards;
     animation-timing-function: ease-in-out;
-
-
+    gap: 20px;
 }
 
 
 .image-wrapper {
+  padding-left: 30px;
     position: relative;
-    grid-column: 2;
-    grid-row: 1/2;
     animation-play-state: paused;
     animation-duration: 0.4s;
     animation-name: animate-fade;
     animation-delay: 0.3s;
     animation-fill-mode: backwards;
 }
+
 
 .image-wrapper:hover::before {
     transform: translate(3px, 3px);
@@ -158,11 +226,12 @@ export default {
     border-radius: 10px;
     border: 1px solid #64ffda;
     top: 15px;
-    left: 15px;
+    left: 45px;
     z-index: -1;
     transition: transform ease-out 0.2s;
 
 }
+
 
 
 
