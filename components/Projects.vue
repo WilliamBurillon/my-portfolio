@@ -23,7 +23,7 @@
 
                         <div class="project-article">
                             <nuxt-link :to="project.article" class="project-article a-class">
-                                <p>Read more</p>
+                                <p style="margin-bottom: 0px">Read more</p>
                                 <Icon size="48px" name="material-symbols:arrow-right-rounded"/>
                             </nuxt-link>
                         </div>
