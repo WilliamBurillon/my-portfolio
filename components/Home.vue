@@ -6,8 +6,8 @@
                         <h3 class="h3-class" v-bind:class="{'typingEffect' : show }">Hello there 👋, my name is </h3>
                     </div>
                     <h1 class="h1-class" >William Burillon.</h1>
-                    <h2 class="h2-class">Data whisperer, code tamer, and humble problem solver.</h2>
-                    <p>I am a DevOps engineer with some Data affinity. I love to create data projects and put them into production. </p>
+                    <h2 class="h2-class">DevOps & Cloud consultant, Trainer as well. </h2>
+                    <p>I am a DevOps engineer specialized in containers, orchestration and cloud/</p>
                 </div>
                 <div class="button-wrapper">
                     <button class="my-button">
