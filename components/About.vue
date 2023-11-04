@@ -13,8 +13,8 @@
                     <p>As a <span class="colored-text">DevOps</span> and <span class="colored-text">Data engineer</span>,
                         I enjoy creating solutions that are both technically sound and practical
                         for real-world business needs. I am passionate about optimizing processes and finding ways to
-                        make data
-                        work for my clients, whether that means building a <span class="colored-text">scalable data pipeline</span>,
+                        make projects
+                        work for my clients, whether that means building a <span class="colored-text">efficient CI/CD pipeline</span>,
                         creating a <span class="colored-text">cloud-based architecture</span>,
                         or developing a <span class="colored-text">custom analytics dashboard</span>. I believe that
                         effective data engineering and DevOps practices can
